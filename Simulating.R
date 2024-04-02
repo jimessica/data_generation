@@ -8,19 +8,18 @@ full_sample <- c(initial_sample, repeated_obs)
 # Step 2: Change half of the negative values to positive
 negative_obs <- which(full_sample < 0)
 num_to_change <- length(negative_obs) / 2
-sample_indices <- sample(negative_obs, num_to_change)
-full_sample[sample_indices] <- abs(full_sample[sample_indices])
+sample_obs <- sample(negative_obs, num_to_change)
+full_sample[sample_obs] <- abs(full_sample[sample_obs])
 
 # Step 3: Change the decimal place on values between 1 and 1.1
 one_obs <- which(full_sample >= 1 & full_sample <= 1.1)
-num_to_change <- length(one_obs) / 2
-sample_indices <- sample(one_obs, num_to_change)
-full_sample[sample_indices] <- full_sample[sample_indices] * 10
+full_sample[one_obs] <- full_sample[one_obs] - 1
 
-# Calculate the mean of the cleaned dataset
+
+# Step 4: Calculate the mean of the cleaned dataset
 mean_cleaned_data <- mean(full_sample)
 mean_cleaned_data
 
-# Check if the mean is greater than 0
+# Step 5: Check if the mean is greater than 0
 mean_greater_than_zero <- mean_cleaned_data > 0
 mean_greater_than_zero

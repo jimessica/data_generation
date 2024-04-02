@@ -6,7 +6,7 @@ editor: visual
 
 ## Hypothesizing and Understanding the Task
 
-Before simulating, I wanted to gain a better understanding of the question and how the distribution would be manipulated by the changes made in steps 1-3. To do so, I sketched what the distribution would look like before and throughout each change. This sketch can be found at Sketch.png.
+Before simulating, I wanted to gain a better understanding of the question and how the distribution would be manipulated by the changes made in steps 1-3. To do so, I sketched what the distribution would look like before and throughout each change. This sketch can be found at [Sketches.png](https://github.com/jimessica/data_generation/blob/main/Sketches.png).
 
 ## Simulating the Data
 
