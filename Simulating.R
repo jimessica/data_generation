@@ -16,8 +16,6 @@ initial_sample <-
     obs_value = rnorm(900, mean = 1, sd = 1)
   )
 
-initial_sample
-
 # Repeat the first 100 observations to create the final 100 observations
 repeated_obs <- 
   tibble(
@@ -38,8 +36,6 @@ num_to_change <-
 #Step2.3: Change num_to_change to positive values
 full_sample <- full_sample |>
   mutate(obs_value = ifelse(obs_value %in% num_to_change, abs(obs_value), obs_value))
-
-full_sample
 
 
 ## Step 3: Change the decimal place on values between 1 and 1.1
